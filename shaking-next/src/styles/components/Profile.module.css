@@ -26,4 +26,11 @@ color: var(--title);
     margin-top: top 0.5rem;
 
     
-    }
+}
+
+.profileContainer div p img {
+        font-size: 1rem;
+        margin-top: top 0.5rem;
+        margin-right: 0.5rem;
+        
+}
