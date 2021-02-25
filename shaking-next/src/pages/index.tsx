@@ -10,6 +10,7 @@ import { Profile } from "../components/Profile";
 
 import styles from "../styles/pages/Home.module.css";
 import { ChallengeBox } from "../components/ChallengeBox";
+import { CountDownProvider } from '../contexts/CountDownContexts';
 
 export default function Home() {
   return (
@@ -18,18 +19,19 @@ export default function Home() {
         <title>Shaking</title>
       </Head>
       <ExperienceBar />
+      <CountDownProvider>
+        <section>
+          <div>
+            <Profile />
+            <CompletedChallenges />
+            <Countdown />
+          </div>
+          <div>
+            <ChallengeBox />
 
-      <section>
-        <div>
-          <Profile />
-          <CompletedChallenges />
-          <Countdown />
-        </div>
-        <div>
-          <ChallengeBox />
-
-        </div>
-      </section>
+          </div>
+        </section>
+      </CountDownProvider>
     </div>
   );
 }
